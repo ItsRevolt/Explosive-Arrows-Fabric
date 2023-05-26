@@ -32,7 +32,7 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
     public void tick() {
         super.tick();
         if (this.world.isClient && !this.inGround) {
-            this.world.addParticle(ParticleTypes.SMOKE, this.getX(), this.getY(), this.getZ(), 1.0, 5.0, 0.0);
+            this.world.addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + .5f, this.getZ(), 0.0, 0.0, 0.0);
         }
 
     }

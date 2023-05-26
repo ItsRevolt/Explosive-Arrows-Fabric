@@ -1,21 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "ATA",
-    "AAA"
-  ],
-  "key": {
-    "T": {
-      "item": "minecraft:tnt"
-    },
-    "A": {
-      "item": "minecraft:arrow"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:arrow"
+  },
+  "addition": {
+    "item": "minecraft:tnt"
   },
   "result": {
-    "item": "explosivearrow:explosive_arrow",
-    "count": 8
+    "item": "explosivearrow:explosive_arrow"
   }
 }
 
