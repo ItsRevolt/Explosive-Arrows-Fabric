@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "explosivearrow",
+  "version": "${version}",
+
+  "name": "Explosive Arrows/TNT Arrows",
+  "description": "A very simple mod that allows you to create explosive arrows/tnt arrows",
+  "authors": [
+    "ItsRevolt"
+  ],
+  "contact": {
+    "homepage": "https://shmokey.lol/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "lol.shmokey.explosivearrow.ExplosiveArrow"
+    ],
+    "client": [
+      "lol.shmokey.explosivearrow.client.ExplosiveArrowClientMod"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
