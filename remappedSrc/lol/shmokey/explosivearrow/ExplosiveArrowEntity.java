@@ -31,8 +31,8 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
     @Override
     public void tick() {
         super.tick();
-        if (this.getWorld().isClient && !this.inGround) {
-            this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + .5f, this.getZ(), 0.0, 0.0, 0.0);
+        if (this.world.isClient && !this.inGround) {
+            this.world.addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + .5f, this.getZ(), 0.0, 0.0, 0.0);
         }
 
     }
@@ -58,8 +58,8 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
 
     private void explode(Vec3d targetPos) {
         if (this.isSubmergedInWater()) return;
-        if (!this.getWorld().isClient) {
-            this.getWorld().createExplosion(this, targetPos.x, targetPos.y, targetPos.z, 4f, ExplosionSourceType.TNT);
+        if (!this.world.isClient) {
+            this.world.createExplosion(this, targetPos.x, targetPos.y, targetPos.z, 4f, ExplosionSourceType.TNT);
         }
         this.remove(RemovalReason.DISCARDED);
     }
