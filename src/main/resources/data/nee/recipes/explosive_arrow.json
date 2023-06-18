@@ -1,13 +1,15 @@
-{
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:arrow"
-  },
-  "addition": {
-    "item": "minecraft:tnt"
-  },
-  "result": {
-    "item": "explosivearrow:explosive_arrow"
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:arrow"
+      },
+      {
+        "item": "minecraft:tnt"
+      }
+    ],
+    "result": {
+      "item": "explosivearrow:explosive_arrow"
+    }
   }
-}
 
