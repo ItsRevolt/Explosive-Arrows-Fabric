@@ -25,6 +25,7 @@ public class ExplosiveArrow implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final lol.shmokey.explosivearrow.EAConfig CONFIG = lol.shmokey.explosivearrow.EAConfig.createAndLoad();
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 	public static final ExplosiveArrowItem EXPLOSIVE_ARROW_ITEM = new ExplosiveArrowItem(new FabricItemSettings());
 	public static final EntityType<ExplosiveArrowEntity> EXPLOSIVE_ARROW_ENTITY = Registry.register(

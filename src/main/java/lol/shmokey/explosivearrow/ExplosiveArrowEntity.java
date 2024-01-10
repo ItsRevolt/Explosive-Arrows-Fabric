@@ -1,5 +1,7 @@
 package lol.shmokey.explosivearrow;
 
+import io.wispforest.owo.Owo;
+import io.wispforest.owo.config.ConfigWrapper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
@@ -12,8 +14,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.World.ExplosionSourceType;
 
 public class ExplosiveArrowEntity extends PersistentProjectileEntity {
-
-
     public ExplosiveArrowEntity(EntityType<? extends ExplosiveArrowEntity> entityType, World world) {
         super((EntityType<? extends PersistentProjectileEntity>) entityType, world);
     }
@@ -59,7 +59,7 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
     private void explode(Vec3d targetPos) {
         if (this.isSubmergedInWater()) return;
         if (!this.getWorld().isClient) {
-            this.getWorld().createExplosion(this, targetPos.x, targetPos.y, targetPos.z, 4f, ExplosionSourceType.TNT);
+            this.getWorld().createExplosion(this, targetPos.x, targetPos.y, targetPos.z, ExplosiveArrow.CONFIG.ExplosiveStrength(), ExplosionSourceType.TNT);
         }
         this.remove(RemovalReason.DISCARDED);
     }
