@@ -6,6 +6,6 @@ Very first mod, contribution/tips welcome! :heartpulse:
 
 ## Available Versions
 
-[1.19.4](https://modrinth.com/mod/explosive-arrows-tnt-arrows/version/1.0.0)
+[1.19.4](https://modrinth.com/mod/explosive-arrows-tnt-arrows)
 
-[1.20.1](https://modrinth.com/mod/explosive-arrows-tnt-arrows/version/RLhqofvC)
+[1.20.1](https://modrinth.com/mod/explosive-arrows-tnt-arrows)
