@@ -2,10 +2,12 @@ package lol.shmokey.explosivearrow;
 
 import io.wispforest.owo.Owo;
 import io.wispforest.owo.config.ConfigWrapper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -19,19 +21,17 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
     }
 
     public ExplosiveArrowEntity(World world, LivingEntity owner) {
-        super(ExplosiveArrow.EXPLOSIVE_ARROW_ENTITY, owner, world);
+        super(ExplosiveArrow.EXPLOSIVE_ARROW_ENTITY, owner, world, new ItemStack(ExplosiveArrow.EXPLOSIVE_ARROW_ITEM), null);
     }
 
     public ExplosiveArrowEntity(World world, double x, double y, double z) {
-        super(ExplosiveArrow.EXPLOSIVE_ARROW_ENTITY, x, y, z, world);
+        super(ExplosiveArrow.EXPLOSIVE_ARROW_ENTITY, x, y, z, world, new ItemStack(ExplosiveArrow.EXPLOSIVE_ARROW_ITEM), null);
     }
-
-
 
     @Override
     public void tick() {
         super.tick();
-        if (this.getWorld().isClient && !this.inGround) {
+        if (this.getWorld().isClient && !this.isInGround()) {
             this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + .5f, this.getZ(), 0.0, 0.0, 0.0);
         }
 
@@ -39,6 +39,11 @@ public class ExplosiveArrowEntity extends PersistentProjectileEntity {
 
     @Override
     public ItemStack asItemStack() {
+        return new ItemStack(ExplosiveArrow.EXPLOSIVE_ARROW_ITEM);
+    }
+
+    @Override
+    protected ItemStack getDefaultItemStack() {
         return new ItemStack(ExplosiveArrow.EXPLOSIVE_ARROW_ITEM);
     }
 

@@ -6,6 +6,7 @@ import net.minecraft.item.ArrowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 public class ExplosiveArrowItem extends ArrowItem {
 
@@ -14,7 +15,7 @@ public class ExplosiveArrowItem extends ArrowItem {
     }
 
     @Override
-    public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter) {
+    public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter, @Nullable ItemStack shotFrom) {
         return new ExplosiveArrowEntity(world, shooter);
     }
 
