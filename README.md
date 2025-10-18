@@ -1,3 +1,6 @@
+> [!WARNING]  
+> New versions hosted on [Gitlab](https://gitlab.com/reavolt/explosive-arrows-minecraft/). This repo is archived.
+
 # Explosive Arrows Fabric
 
 A very simple fabric mod that adds explosive arrows to minecraft. The arrows should be a 1:1 mimic of TNT and act like it.
